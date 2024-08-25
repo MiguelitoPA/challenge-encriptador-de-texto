@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Teko:wght@300..700&family=Tilt+Neon&family=Zain:wght@200;300;400;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Teko:wght@300..700&family=Tilt+Neon&family=Zain:wght@200;300;400;700;800;900&display=swap");
+
+:root {
+  --bg-color: #111;
+  --box-shadow: rgba(159, 240, 0, 0.5);
+  --main-color: #0c0;
+  --alt-color: #0a0;
+  --glow-color: #9f0;
+  --main-font-color: #ddd;
+  --krona-font: 'Krona One';
+  --rubik-font: 'Rubik';
+  --montserrat-font: 'Montserrat';
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--main-font-color);
+}
+
+header {
+  display: flex;
+  border-bottom: 5px solid var(--main-color);
+  box-shadow: 0px 0px 10px 2px var(--box-shadow);
+}
+
+.header-container {
+  align-items: center;
+  display: flex;
+  gap: 25px;
+  padding: 20px 0;
+}
+
+.header-logo {
+  display: flex;
+  margin: 0 25px;
+  height: auto;
+  z-index: 1;
+}
+
+.header-title {
+  text-shadow: 0px 0px 32px var(--box-shadow);
+  color: var(--glow-color);
+  display: flex;
+  font-family: var(--rubik-font);
+  font-size: 2.5rem;
+  justify-content: center;
+  letter-spacing: 5px;
+  position: absolute;
+  width: 100%;
+}
+
+.main-section {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 5%;
+  height: 90vh;
+}
+
+.content-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2%;
+  width: 50%;
+  height: 85%;
+
+  border: 5px solid var(--main-color);
+  border-radius: 16px;
+  box-shadow: 0px 0px 10px 2px var(--box-shadow);
+}
+
+.text-area {
+  background: none;
+  border: none;
+  color: var(--main-font-color);
+  font-family: var(--rubik-font);
+  font-size: 2rem;
+  resize: none ;
+  scrollbar-width: none;
+  outline: none;
+  overflow: auto;
+  width: 100%;
+  height: 80%;
+}
+
+textarea::placeholder {
+  color: var(--alt-color);
+  font-size: 2rem;
+}
+
+.warning-container {
+  align-items: center;
+  display: flex;
+  font-family: var(--rubik-font);
+  font-size: 1.5rem;
+  gap: 10px;
+  width: 100%;
+}
+
+.warning-container img {
+  width: 25px;
+  height: auto;
+}
+
+.button-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  width: 100%;
+}
+
+.content-container button {
+  padding: 16px;
+  margin: 10px 0;
+  width: 50%;
+  color: var(--main-font-color);
+  background: var(--main-color);
+  border: none;
+  border: 2px solid var(--glow-color);
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px 2px var(--box-shadow);
+  font-size: 1.5rem;
+  font-family: var(--krona-font);
+  letter-spacing: 2px;
+}
+
+.content-container button.decode, button.copy {
+  background: transparent;
+  border: 2px solid var(--glow-color);
+  box-shadow: 0px 0px 10px 2px var(--box-shadow);
+  color: var(--glow-color);
+}
+
+/* CONTENEDOR DERECHO */
+
+.text-area.result {
+  font-family: var(--rubik-font);
+  font-size: 1.5rem;
+  height: 90%;
+  text-align: justify;
+}
+
+.content-container.right {
+  justify-content: center;
+  text-align: center;
+  width: 25%;
+}
+
+.result-img {
+  margin: 10% 0;
+}
+
+.result-msg {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--montserrat-font);
+  gap: 10px;
+}
+
+.content-container button.copy {
+  width: 100%;
+}
+
+/* */
+
+
+.footer-container {
+  margin-top: 25px;
+  padding: 24px;
+  background-color: var(--main-color);
+  box-shadow: 0px 0px 10px 2px var(--box-shadow);
+  color: var(--bg-color);
+  font-family: var(--krona-font);
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* EFECTOS BOTONES */
+
+.button-container button:hover, .copy:hover {
+  background: #7f0;
+  border: 2px solid var(--main-font-color);
+  box-shadow: 0px 0px 10px 2px var(rgba(255, 255, 255, 0.5));
+  color: var(--bg-color);
+  cursor: pointer;
+  font-weight: 700;
+  transform: scale(1.05);
+  transition: 0.5s ease;
+}
+
+.button-container button:active, .copy:active {
+  background: #0a0;
+  border: 2px solid var(--glow-color);
+  box-shadow: 0px 0px 0px 0px var(rgba(255, 255, 255, 0));
+  transform: scale(1);
+  transition: 0.3s ease;
+}
+
+.button-container button:disabled {
+  background: transparent;
+  border: 2px solid var(--glow-color);
+  color: var(--glow-color);
+  box-shadow: 0px 0px 10px 2px var(--box-shadow);
+  font-weight: 400;
+  cursor: not-allowed;
+  transform: scale(1);
+  transition: none;
+}
+
+@media (max-width: 1100px) {
+  .header-title {
+    font-size: 1.75rem;
+  }
+
+  .header-img {
+    width: 32px;
+  }
+
+  .main-section {
+    flex-direction: column;
+    gap: 25px;
+    height: auto;
+  }
+
+  .content-container {
+    margin-top: 5%;
+    width: 90%;
+  }
+
+  .content-container.right {
+    margin-top: 0;
+    padding: 5%;
+    width: 90%;
+    min-height: 30%;
+  }
+
+  .text-area {
+    font-size: 1.5rem;
+    height: 45vh;
+  }
+
+  textarea::placeholder {
+    font-size: 1.5rem;
+  }
+
+  .text-area.result {
+    overflow: auto;
+    padding: 3%;
+    min-height: 10vh;
+  }
+
+  .result-img {
+    display: none;
+  }
+
+
+  .content-container button {
+    font-size: 1rem;
+    box-shadow: 0px 0px 2px 2px var(--box-shadow);
+  }
+
+  .warning-container {
+    font-size: 1.25rem;
+  }
+
+  .footer-container {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .header-container {
+    justify-content: start;
+    margin: 2% 0;
+    padding: 10px 0;
+    text-align: center;
+  } 
+
+  .header-title {
+    font-size: 1.25rem;
+    margin: 0 25%;
+    width: 50%;
+  }
+
+  .header-logo {
+    margin: 0 5px;
+  }
+
+  .header-img {
+    width: 24px;
+  }
+
+  .button-container {
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .text-area {
+    padding: 3%;
+    font-size: 1.2rem;
+  }
+
+  textarea::placeholder {
+    font-size: 1.2rem;
+  }
+
+  .text-area.result {
+    padding: 2%;
+    font-size: 1.2rem;
+  }
+
+  .content-container.right {
+    padding: 7%;
+  }
+
+  .content-container button {
+    width: 90%;
+  }
+
+  .content-container button.copy {
+    width: 90%;
+  }
+
+  .warning-container {
+    font-size: 1rem;
+  }
+}

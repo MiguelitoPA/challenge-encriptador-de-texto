@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Encriptador de Texto</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a class="header-logo" target="_blank" href="https://www.aluracursos.com/">
+                <img class="header-img" src="./assets/logo-alura.png" alt="logo de alura latam">
+            </a>
+            <h3 class="header-title">Encriptador de Texto</h1>
+        </div>
+    </header>
+    <main>
+        <section class="main-section">
+            <section class="content-container">
+                <textarea class="text-area" id="textarea" placeholder="Escribe tu mensaje aquí..."></textarea>
+                <div class="warning-container">
+                    <img src="./assets/warning.png" alt="">
+                    <p>Solo letras minúsculas y sin acentos.</p>
+                </div>
+                <div class="button-container">
+                    <button onclick="encrypt()" class="code" id="encrypt">Encriptar</button>
+                    <button onclick="decrypt()" class="decode" id="decrypt">Desencriptar</button>
+                </div>
+            </section>
+            <section class="content-container right">
+                <textarea class="text-area result" id="textarea-result" readonly style="display:none;">
+                </textarea>
+                <img class="result-img" width="200px" src="./assets/question-b.png" alt="">
+                <div class="result-msg">
+                    <h2>Ningún mensaje fue encontrado</h2>
+                    <p>Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
+                <button onclick="copy()" class="copy" style="display:none;">Copiar</button>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            Proyecto desarrollada por Miguel Palacios
+        </div>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+</html>
